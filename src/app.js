@@ -14,4 +14,11 @@ app.use(express.urlencoded({extended: true, limit: "16kb"})) //url endcoder
 app.use(express.static("public"))  //for accepting pdf or images in public folder
 app.use(cookieParser())  //for accepting cookies to do CRUD operations
 
+
+//Router Import
+import userRouter from "./routes/user.routes.js"
+
+//routes declaration
+app.use("/api/v1/users", userRouter)
+
 export { app }

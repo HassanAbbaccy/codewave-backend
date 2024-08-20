@@ -6,6 +6,9 @@ const asyncHanlder = (requestHandler) => {
     catch((err) => next(err));
   };
 };
+
+
+export {asyncHanlder}
 /*const asyncHanlder = (fn) => async (req, res, next) =>{
     try {
         await fn(req, res, next) //function execute
